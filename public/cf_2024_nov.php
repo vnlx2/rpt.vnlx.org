@@ -9,6 +9,7 @@ $fields = [
 	"out",
 	"balance"
 ];
+$potp = "assets/img/pot";
 $data = [
 	[
 		"2024-08-24 22:25:00",
@@ -22,42 +23,42 @@ $data = [
 		"Bayar booth CF ke M. Nuryusuf Ali",
 		0,
 		300000,
-		""
+		"<a target=\"_blank\" href=\"{$potp}/to_m_nuryusuf.png\">Bukti transfer</a>"
 	],
 	[
 		"2024-09-02 08:56:30",
 		"Funding from Gilang Fachrezi",
 		300000,
 		0,
-		""
+		"<a target=\"_blank\" href=\"{$potp}/from_gilang_and_nyoman.jpeg\">Bukti transfer</a> (yang 50k dari Nyoman)"
 	],
 	[
 		"2024-09-02 08:56:30",
 		"Funding from I Nyoman Kahar Wedanta",
 		50000,
 		0,
-		""
+		"<a target=\"_blank\" href=\"{$potp}/from_gilang_and_nyoman.jpeg\">Bukti transfer</a> (yang 300k dari Gilang)"
 	],
 	[
 		"2024-09-02 13:21:00",
 		"Funding from I Putu Heri Subrata",
 		60000,
 		0,
-		""
+		"<a target=\"_blank\" href=\"{$potp}/from_heri.jpeg\">Bukti transfer</a>"
 	],
 	[
 		"2024-09-03 19:58:32",
 		"Funding from Made Widiambara",
 		500000,
 		0,
-		""
+		"<a target=\"_blank\" href=\"{$potp}/from_made.jpeg\">Bukti transfer</a>"
 	],
 	[
 		"2024-09-04 18:17:23",
 		"Funding from Arief Setiawan",
 		100000,
 		0,
-		""
+		"<a target=\"_blank\" href=\"{$potp}/from_arief.jpeg\">Bukti transfer</a>"
 	]
 ];
 
@@ -72,9 +73,11 @@ html {
 }
 .mc {
 	text-align: center;
+	overflow-x: scroll;
 }
 .mup {
 	text-align: left;
+	display: flex;
 }
 .tb-rpt {
 	table-layout: auto;
@@ -98,7 +101,7 @@ html {
 	border: 1px solid #000;
 	width: 400px;
 	padding: 10px 10px 40px 10px;
-	margin: 0 0 20px 0;
+	margin: 0 10px 20px 10px;
 }
 #countdown {
 	display: flex;
@@ -154,8 +157,8 @@ function startCountdown() {
 			<div class="cd" id="seconds"></div>
 		</div>
 		<script>startCountdown();</script>
+		<h3 style="text-align: left;">Bendahara VNL: Ammar Faizi</h3>
 		<div class="mup">
-			<h3>Bendahara VNL: Ammar Faizi</h3>
 			<div class="ctc">
 				<h3 style="text-align: center;">Kontak Bendahara VNL</h3>
 				<table>
@@ -168,20 +171,38 @@ function startCountdown() {
 					</tbody>
 				</table>
 			</div>
+			<div class="ctc">
+			<h3 style="text-align: center;">Rekening Bendahara VNL (Ammar Faizi)</h3>
+<pre>Bank BCA
+0770711177
+
+Bank BCA Digital (Blu)
+001111167777
+
+Bank Mandiri
+1370024055440
+
+Bank BTPN
+90011727891
+
+Bank Jago
+100777235327</pre>
+			</div>
 		</div>
-		<table border="1" class="tb-rpt">
-			<thead>
-				<tr>
-					<th style="width: 8px;">No.</th>
-					<th style="width: 205px;">Date</th>
-					<th style="width: 305px;">Description</th>
-					<th style="width: 115px;">In</th>
-					<th style="width: 115px;">Out</th>
-					<th style="width: 115px;">Balance</th>
-					<th style="max-width: 100px;">Notes</th>
-				</tr>
-			</thead>
-			<tbody>
+		<div style="width: 1400px;">
+			<table border="1" class="tb-rpt">
+				<thead>
+					<tr>
+						<th style="width: 8px;">No.</th>
+						<th style="width: 205px;">Date</th>
+						<th style="width: 305px;">Description</th>
+						<th style="width: 115px;">In</th>
+						<th style="width: 115px;">Out</th>
+						<th style="width: 115px;">Balance</th>
+						<th style="width: 400px;">Notes</th>
+					</tr>
+				</thead>
+				<tbody>
 <?php $b = 0; foreach ($data as $i => $d):
 	if ($d[2] <= 0 && $d[3] > 0)
 		$clr = "#fadee8";
@@ -190,18 +211,20 @@ function startCountdown() {
 	else
 		$clr = "#fff";
 ?>
-				<tr style="background-color: <?= $clr; ?>">
-					<td><?= ++$i ?>.</td>
-					<td><?= e(date("D, d M Y H:i:s", strtotime($d[0]))); ?></td>
-					<td align="left"><?= e($d[1]); ?></td>
-					<td align="right"><?= e(rupiah_fmt($d[2])); ?></td>
-					<td align="right"><?= e(rupiah_fmt($d[3])); ?></td>
-					<td align="right"><?php $b = $b + $d[2] - $d[3]; ?><?= rupiah_fmt($b); ?></td>
-					<td><?= e($d[4]); ?></td>
-				</tr>
+					<tr style="background-color: <?= $clr; ?>">
+						<td><?= ++$i ?>.</td>
+						<td><?= e(date("D, d M Y H:i:s", strtotime($d[0]))); ?></td>
+						<td align="left"><?= e($d[1]); ?></td>
+						<td align="right"><?= e(rupiah_fmt($d[2])); ?></td>
+						<td align="right"><?= e(rupiah_fmt($d[3])); ?></td>
+						<td align="right"><?php $b = $b + $d[2] - $d[3]; ?><?= rupiah_fmt($b); ?></td>
+						<td align="left"><?= $d[4]; ?></td>
+					</tr>
 <?php endforeach; ?>
-			</tbody>
-		</table>
+				</tbody>
+			</table>
+		</div>
+		<div style="margin-bottom: 700px;"></div>
 	</div>
 </body>
 </html>
