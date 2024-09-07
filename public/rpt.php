@@ -24,9 +24,11 @@ if ($ud[2] === 0) {
 	$type = "CR";
 }
 
+$url = ($_SERVER["HTTPS"] ? "https" : "http") . "://" . $_SERVER["HTTP_HOST"];
+
 if ($ud[5]) {
 	$att = $ud[5];
-	$ogi = e(($_SERVER["HTTPS"] ? "https" : "http") . "://" . $_SERVER["HTTP_HOST"] . "/{$att[0]}");
+	$ogi = e("{$url}/{$att[0]}");
 } else {
 	$att = NULL;
 	$ogi = NULL;
@@ -38,10 +40,12 @@ $title = "TX {$uc} | ".e($ud[1]);
 <html>
 <head>
 <title><?= $title ?></title>
-<link rel="stylesheet" type="text/css" href="assets/css/base.css" />
 <meta property="og:title" content="<?= $title ?>">
 <meta property="og:description" content="<?= $title ?>">
+<meta property="og:url" content="<?= "{$url}{$_SERVER["REQUEST_URI"]}" ?>"/>
 <?php if (isset($ogi)): ?><meta property="og:image" content="<?= $ogi ?>"><?php endif; ?>
+
+<link rel="stylesheet" type="text/css" href="assets/css/base.css" />
 <style>
 .mc {
 	text-align: center;
