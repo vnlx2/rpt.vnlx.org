@@ -26,15 +26,22 @@ if ($ud[2] === 0) {
 
 if ($ud[5]) {
 	$att = $ud[5];
+	$ogi = e(($_SERVER["HTTPS"] ? "https" : "http") . "://" . $_SERVER["HTTP_HOST"] . "/{$att[0]}");
 } else {
 	$att = NULL;
+	$ogi = NULL;
 }
+
+$title = "TX {$uc} | ".e($ud[1]);
 
 ?><!DOCTYPE html>
 <html>
 <head>
-<title>Laporan Keuangan VNL</title>
+<title><?= $title ?></title>
 <link rel="stylesheet" type="text/css" href="assets/css/base.css" />
+<meta property="og:title" content="<?= $title ?>">
+<meta property="og:description" content="<?= $title ?>">
+<?php if (isset($ogi)): ?><meta property="og:image" content="<?= $ogi ?>"><?php endif; ?>
 <style>
 .mc {
 	text-align: center;
