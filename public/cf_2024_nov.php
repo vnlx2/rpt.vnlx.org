@@ -151,10 +151,12 @@ Bank Jago
 		$clr = "#d9fcdc";
 	else
 		$clr = "#fff";
+
+	$i++;
 ?>
 					<tr style="background-color: <?= $clr; ?>">
-						<td><?= ++$i ?>.</td>
-						<td><?= e(date("D, d M Y H:i:s", strtotime($d[0]))); ?></td>
+						<td><a target="_blank" href="rpt.php?uc=<?= $i - 1 ?>"><?= $i ?>.</a></td>
+						<td><a target="_blank" href="rpt.php?uc=<?= $i - 1 ?>"><?= e(date("D, d M Y H:i:s", strtotime($d[0]))); ?></a></td>
 						<td align="left"><?= e($d[1]); ?></td>
 						<td align="right"><?= e(rupiah_fmt($d[2])); ?></td>
 						<td align="right"><?= e(rupiah_fmt($d[3])); ?></td>
