@@ -79,7 +79,7 @@ $data = [
 		"Funding from Naufal Rakin Muhamad D.",
 		50000,
 		0,
-		"<a target=\"_blank\" href=\"{$potp}/from_naufal.jpeg\">Bukti transfer</a>",
+		"<a target=\"_blank\" href=\"{$potp}/from_naufal.jpeg\">Bukti transfer</a> (transfer via Gilang)",
 		["{$potp}/from_naufal.jpeg"]
 	]
 ];
