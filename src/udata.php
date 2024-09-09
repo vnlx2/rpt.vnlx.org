@@ -73,5 +73,13 @@ $data = [
 		0,
 		"<a target=\"_blank\" href=\"{$potp}/from_pandika.jpeg\">Bukti transfer</a>",
 		["{$potp}/from_pandika.jpeg"]
+	],
+	[
+		"2024-09-09 08:51:45",
+		"Funding from Naufal Rakin Muhamad D.",
+		50000,
+		0,
+		"<a target=\"_blank\" href=\"{$potp}/from_naufal.jpeg\">Bukti transfer</a>",
+		["{$potp}/from_naufal.jpeg"]
 	]
 ];
