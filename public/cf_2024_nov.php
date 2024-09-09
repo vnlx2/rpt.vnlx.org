@@ -136,7 +136,7 @@ Bank Jago
 					<tr>
 						<th style="width: 8px;">No.</th>
 						<th style="width: 205px;">Date</th>
-						<th style="width: 305px;">Description</th>
+						<th style="width: 400px;">Description</th>
 						<th style="width: 115px;">In</th>
 						<th style="width: 115px;">Out</th>
 						<th style="width: 115px;">Balance</th>
