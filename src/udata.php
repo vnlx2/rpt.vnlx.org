@@ -9,6 +9,7 @@ $fields = [
 	"attachments",
 ];
 $potp = "assets/img/pot";
+$optp = "assets/img/pot/orders";
 $data = [
 	[
 		"2024-08-24 22:25:00",
@@ -97,5 +98,13 @@ $data = [
 		676000,
 		"<a target=\"_blank\" href=\"{$potp}/to_malvin.jpeg\">Bukti transfer</a>",
 		["{$potp}/to_malvin.jpeg"]
+	],
+	[
+		"2024-09-29 16:39:31",
+		"Order from Muhammad Fiqhri Febryan",
+		120000,
+		0,
+		"<a target=\"_blank\" href=\"{$optp}/001_from_mff.jpeg\">Bukti transfer</a>",
+		["{$optp}/001_from_mff.jpeg"]
 	]
 ];
