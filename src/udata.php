@@ -106,5 +106,45 @@ $data = [
 		0,
 		"<a target=\"_blank\" href=\"{$optp}/001_from_mff.jpeg\">Bukti transfer</a>",
 		["{$optp}/001_from_mff.jpeg"]
+	],
+	[
+		"2024-09-29 16:47:58",
+		"Order from Hafidz Zaenul Ahkam",
+		421000,
+		0,
+		"<a target=\"_blank\" href=\"{$optp}/002_from_hza.jpeg\">Bukti transfer</a>",
+		["{$optp}/002_from_hza.jpeg"]
+	],
+	[
+		"2024-09-29 17:03:21",
+		"Order from Muhammad Yuda Sulaiman",
+		319000,
+		0,
+		"<a target=\"_blank\" href=\"{$optp}/003_from_mys.jpeg\">Bukti transfer</a>",
+		["{$optp}/003_from_mys.jpeg"]
+	],
+	[
+		"2024-09-29 17:05:30",
+		"Order from Dimas Gonzalest Santoso",
+		357000,
+		0,
+		"<a target=\"_blank\" href=\"{$optp}/004_from_dgs.jpeg\">Bukti transfer</a>",
+		["{$optp}/004_from_dgs.jpeg"]
+	],
+	[
+		"2024-09-29 17:23:43",
+		"Order from Zidan Andu",
+		168000,
+		0,
+		"<a target=\"_blank\" href=\"{$optp}/005_from_zff.jpeg\">Bukti transfer</a>",
+		["{$optp}/005_from_zff.jpeg"]
+	],
+	[
+		"2024-09-29 18:22:45",
+		"Order from Andre",
+		180000,
+		0,
+		"<a target=\"_blank\" href=\"{$optp}/006_from_a.jpeg\">Bukti transfer</a>",
+		["{$optp}/006_from_a.jpeg"]
 	]
 ];
