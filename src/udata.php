@@ -84,14 +84,6 @@ $data = [
 		["{$potp}/from_naufal.jpeg"]
 	],
 	[
-		"2024-09-09 08:51:45",
-		"Funding from Naufal Rakin Muhammad Dzakiyy",
-		50000,
-		0,
-		"<a target=\"_blank\" href=\"{$potp}/from_naufal.jpeg\">Bukti transfer</a> (transfer via Gilang)",
-		["{$potp}/from_naufal.jpeg"]
-	],
-	[
 		"2024-09-16 19:11:23",
 		"Bayar ganci dan gantungan HP ke Malvin",
 		0,
