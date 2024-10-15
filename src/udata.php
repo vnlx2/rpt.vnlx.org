@@ -138,5 +138,13 @@ $data = [
 		0,
 		"<a target=\"_blank\" href=\"{$optp}/006_from_a.jpeg\">Bukti transfer</a>",
 		["{$optp}/006_from_a.jpeg"]
+	],
+	[
+		"2024-10-15 19:21:02",
+		"Bayar ticket CF (4 ticket)",
+		0,
+		324000,
+		"<a target=\"_blank\" href=\"{$potp}/to_ticket2u.jpeg\">Bukti transfer</a>",
+		["{$potp}/to_ticket2u.jpeg"]
 	]
 ];
