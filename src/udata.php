@@ -144,7 +144,7 @@ $data = [
 		"Bayar ticket CF (4 ticket)",
 		0,
 		324000,
-		"<a target=\"_blank\" href=\"{$potp}/to_ticket2u.jpeg\">Bukti transfer</a>",
-		["{$potp}/to_ticket2u.jpeg"]
+		"<a target=\"_blank\" href=\"{$potp}/to_ticket2u.png\">Bukti transfer</a>",
+		["{$potp}/to_ticket2u.png"]
 	]
 ];
